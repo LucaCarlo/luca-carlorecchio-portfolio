@@ -365,7 +365,7 @@ img {
 /* === Scroll Indicator === */
 .hero-scroll {
     position: absolute;
-    bottom: 40px;
+    bottom: 16px;
     left: 24px;
 }
 
