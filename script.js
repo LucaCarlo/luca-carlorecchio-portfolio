@@ -253,23 +253,4 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
     }
 
-    // === Typing Effect on Hero Subtitle (subtle) ===
-    const subtitle = document.querySelector('.hero-subtitle');
-    if (subtitle) {
-        const text = subtitle.textContent;
-        subtitle.textContent = '';
-        subtitle.style.borderRight = '2px solid var(--accent)';
-
-        let i = 0;
-        const typeInterval = setInterval(() => {
-            subtitle.textContent += text[i];
-            i++;
-            if (i >= text.length) {
-                clearInterval(typeInterval);
-                setTimeout(() => {
-                    subtitle.style.borderRight = 'none';
-                }, 1000);
-            }
-        }, 50);
-    }
 });
