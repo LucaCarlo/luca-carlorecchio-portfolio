@@ -284,8 +284,9 @@ img {
 }
 
 .hero-title--outline {
-    -webkit-text-stroke: 2px var(--text-primary);
-    color: transparent;
+    -webkit-text-stroke: 3px var(--text-primary);
+    color: var(--bg);
+    paint-order: stroke fill;
     display: inline-block;
     transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 -webkit-text-stroke-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
