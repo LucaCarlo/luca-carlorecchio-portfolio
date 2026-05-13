@@ -201,6 +201,14 @@ img {
     -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
 }
 
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .hero-glow {
     position: absolute;
     border-radius: 50%;
@@ -279,12 +287,13 @@ img {
     -webkit-text-stroke: 2px var(--text-primary);
     color: transparent;
     display: inline-block;
-    transition: var(--transition-slow);
+    transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                -webkit-text-stroke-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-title--outline:hover {
     color: var(--text-primary);
-    -webkit-text-stroke: 0px;
+    -webkit-text-stroke-color: transparent;
 }
 
 .hero-subtitle {
@@ -365,34 +374,37 @@ img {
 /* === Scroll Indicator === */
 .hero-scroll {
     position: absolute;
-    bottom: 16px;
-    left: 24px;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .scroll-indicator {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     color: var(--text-tertiary);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.28em;
     transition: var(--transition);
+    padding: 4px 8px;
 }
 
 .scroll-indicator:hover {
-    color: var(--text-secondary);
+    color: var(--accent-light);
 }
 
 .scroll-text {
-    writing-mode: vertical-rl;
+    padding-left: 0.28em;
 }
 
 .scroll-line {
     width: 1px;
-    height: 60px;
-    background: var(--text-tertiary);
+    height: 110px;
+    background: linear-gradient(to bottom, transparent, var(--text-tertiary) 15%, var(--text-tertiary) 85%, transparent);
     position: relative;
     overflow: hidden;
 }
@@ -400,12 +412,26 @@ img {
 .scroll-line::after {
     content: '';
     position: absolute;
-    top: -100%;
+    top: -40%;
     left: 0;
     width: 100%;
     height: 40%;
-    background: var(--accent);
-    animation: scrollLine 2s ease-in-out infinite;
+    background: linear-gradient(to bottom, transparent, var(--accent));
+    animation: scrollLine 2.2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    width: 9px;
+    height: 9px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -10px;
+    transition: var(--transition);
+}
+
+.scroll-indicator:hover .scroll-arrow {
+    transform: rotate(45deg) translate(2px, 2px);
 }
 
 @keyframes scrollLine {
@@ -860,13 +886,81 @@ img {
 }
 
 .contact-grid {
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 56px;
+    max-width: 960px;
+    align-items: center;
 }
 
 .contact-links {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.contact-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-card);
+}
+
+.contact-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.contact-photo:hover .contact-photo-frame img {
+    transform: scale(1.04);
+}
+
+.contact-photo-border {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    pointer-events: none;
+}
+
+.contact-photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    background: radial-gradient(circle at 70% 0%, var(--accent-glow), transparent 60%);
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.contact-photo-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.contact-photo-role {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.04em;
 }
 
 .contact-card {
@@ -1123,6 +1217,20 @@ img {
     /* Timeline Mobile */
     .timeline {
         padding-left: 32px;
+    }
+
+    /* Contact Mobile */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .contact-photo {
+        order: -1;
+        max-width: 220px;
+        margin: 0 auto;
     }
 
     /* Quote Mobile */
