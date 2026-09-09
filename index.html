@@ -14,8 +14,10 @@
     <!-- Controllo scroll: freccia in giu all'inizio, torna in cima dopo -->
     <div class="scroll-ctl" id="scrollCtl">
         <a href="#about" class="scroll-ctl-down" aria-label="Scorri verso il basso">
-            <span class="scroll-ctl-text">Scorri</span>
             <span class="scroll-ctl-line"></span>
+            <svg class="scroll-ctl-tip" width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+                <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </a>
         <button type="button" class="scroll-ctl-top" id="scrollTop" aria-label="Torna in cima">
             <svg class="scroll-ctl-ring" viewBox="0 0 48 48" aria-hidden="true">
@@ -76,13 +78,18 @@
                 </a>
                 <a href="#contact" class="btn btn--ghost">Parliamone</a>
             </div>
-            <a href="#ai" class="hero-cert" data-animate="fade-up" data-delay="500">
-                <span class="hero-cert-mark">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div class="hero-facts" data-animate="fade-up" data-delay="500">
+                <span class="hero-fact">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    Sviluppatore in <strong>Nexia Srl</strong> &middot; VAY
                 </span>
-                <strong>22</strong> certificazioni Anthropic
-                <svg class="hero-cert-go" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+                <span class="hero-facts-sep" aria-hidden="true"></span>
+                <a href="#ai" class="hero-fact hero-fact--link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                    <strong>22</strong> certificazioni Anthropic
+                    <svg class="hero-fact-go" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
         </div>
         <div class="hero-stack" aria-label="Tecnologie che utilizzo">
             <div class="hero-stack-track">

@@ -237,6 +237,10 @@ img {
 .hero-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-badge {
@@ -250,7 +254,7 @@ img {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 
 .pulse-dot {
@@ -311,6 +315,7 @@ img {
     max-width: 540px;
     line-height: 1.7;
     margin-bottom: 48px;
+    margin-inline: auto;
 }
 
 .hero-description em {
@@ -323,7 +328,8 @@ img {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    margin-bottom: 34px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 /* === Buttons === */
@@ -1203,51 +1209,63 @@ img {
     }
 }
 
-/* === Hero: badge certificazioni === */
-.hero-cert {
+/* === Hero: riga credenziali === */
+.hero-facts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border);
+    width: min(560px, 100%);
+}
+
+.hero-fact {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 36px;
-    padding: 9px 16px 9px 10px;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.02);
-    color: var(--text-secondary);
-    font-size: 0.85rem;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
     text-decoration: none;
-    transition: var(--transition);
+    transition: color 0.3s ease;
 }
 
-.hero-cert strong {
-    color: var(--text-primary);
-    font-weight: 700;
-}
-
-.hero-cert-mark {
-    display: grid;
-    place-items: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--gradient-accent);
-    color: #fff;
+.hero-fact svg {
+    color: var(--accent);
+    opacity: 0.8;
     flex: none;
 }
 
-.hero-cert-go {
+.hero-fact strong {
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.hero-facts-sep {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--border-hover);
+}
+
+.hero-fact--link:hover {
+    color: var(--text-secondary);
+}
+
+.hero-fact--link:hover strong {
+    color: var(--accent-light);
+}
+
+.hero-fact-go {
     opacity: 0;
-    transform: translateX(-6px);
-    transition: var(--transition);
+    transform: translateX(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: var(--accent-light);
 }
 
-.hero-cert:hover {
-    border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-primary);
-}
-
-.hero-cert:hover .hero-cert-go {
+.hero-fact--link:hover .hero-fact-go {
     opacity: 1;
     transform: none;
 }
@@ -1311,8 +1329,8 @@ img {
 /* === Controllo scroll (basso a destra) === */
 .scroll-ctl {
     position: fixed;
-    right: 34px;
-    bottom: 34px;
+    right: 40px;
+    bottom: 100px;
     z-index: 90;
     display: grid;
     place-items: center;
@@ -1327,7 +1345,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
     color: var(--text-tertiary);
     font-size: 0.62rem;
     font-weight: 500;
@@ -1337,15 +1355,10 @@ img {
     transition: opacity 0.45s ease, transform 0.45s ease, color 0.3s ease;
 }
 
-.scroll-ctl-down .scroll-ctl-text {
-    padding-left: 0.28em;
-    writing-mode: vertical-rl;
-}
-
 .scroll-ctl-line {
     width: 1px;
-    height: 74px;
-    background: linear-gradient(to bottom, transparent, var(--text-tertiary) 20%, var(--text-tertiary) 80%, transparent);
+    height: 96px;
+    background: linear-gradient(to bottom, transparent, rgba(139, 139, 151, 0.55) 18%, rgba(139, 139, 151, 0.75) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1361,8 +1374,30 @@ img {
     animation: scrollLine 2.2s ease-in-out infinite;
 }
 
+.scroll-ctl-tip {
+    margin-top: -2px;
+    color: var(--text-secondary);
+    transition: transform 0.35s ease, color 0.3s ease;
+}
+
 .scroll-ctl-down:hover {
     color: var(--accent-light);
+}
+
+.scroll-ctl-down:hover .scroll-ctl-tip {
+    color: var(--accent-light);
+    transform: translateY(3px);
+}
+
+/* la punta si accende quando il bagliore del gambo la raggiunge */
+.scroll-ctl-tip {
+    animation: tipPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes tipPulse {
+    0%, 55% { opacity: 0.6; }
+    78% { opacity: 1; }
+    100% { opacity: 0.45; }
 }
 
 @keyframes scrollLine {
@@ -1689,7 +1724,7 @@ img {
 @media (max-width: 768px) {
     .scroll-ctl {
         right: 18px;
-        bottom: 18px;
+        bottom: 20px;
     }
 
     .scroll-ctl-down {
@@ -1698,6 +1733,16 @@ img {
 
     .hero-stack {
         bottom: 26px;
+    }
+
+    .hero-facts {
+        gap: 8px 12px;
+        padding-top: 20px;
+        font-size: 0.78rem;
+    }
+
+    .hero-facts-sep {
+        display: none;
     }
 
     .hero-stack-run span {
