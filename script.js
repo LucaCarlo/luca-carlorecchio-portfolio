@@ -253,4 +253,64 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
     }
 
+
+    // === Controllo scroll: invito a scorrere, poi torna in cima ===
+    const scrollCtl = document.getElementById('scrollCtl');
+    const scrollTopBtn = document.getElementById('scrollTop');
+    const ringFg = document.querySelector('.ring-fg');
+    const RING = 2 * Math.PI * 22;   // circonferenza del cerchio r=22
+
+    if (scrollCtl && scrollTopBtn) {
+        let ticking = false;
+
+        const updateScrollCtl = () => {
+            const y = window.scrollY;
+            const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+            const progress = Math.min(1, Math.max(0, y / max));
+
+            scrollCtl.classList.toggle('is-scrolled', y > window.innerHeight * 0.55);
+
+            if (ringFg) {
+                ringFg.style.strokeDashoffset = String(RING * (1 - progress));
+            }
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateScrollCtl);
+            }
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        updateScrollCtl();
+    }
+
+    // === Filtri dei certificati ===
+    const certFilters = document.getElementById('certFilters');
+    const certsGrid = document.getElementById('certsGrid');
+
+    if (certFilters && certsGrid) {
+        const certs = Array.from(certsGrid.querySelectorAll('.cert'));
+
+        certFilters.addEventListener('click', (e) => {
+            const btn = e.target.closest('.cert-filter');
+            if (!btn) return;
+
+            certFilters.querySelectorAll('.cert-filter').forEach(b => b.classList.remove('is-active'));
+            btn.classList.add('is-active');
+
+            const filter = btn.dataset.filter;
+            certs.forEach(cert => {
+                const show = filter === 'all' || cert.dataset.cat === filter;
+                cert.classList.toggle('is-hidden', !show);
+            });
+        });
+    }
+
+
 });

@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Controllo scroll: freccia in giu all'inizio, torna in cima dopo -->
+    <div class="scroll-ctl" id="scrollCtl">
+        <a href="#about" class="scroll-ctl-down" aria-label="Scorri verso il basso">
+            <span class="scroll-ctl-text">Scorri</span>
+            <span class="scroll-ctl-line"></span>
+        </a>
+        <button type="button" class="scroll-ctl-top" id="scrollTop" aria-label="Torna in cima">
+            <svg class="scroll-ctl-ring" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="ring-bg" cx="24" cy="24" r="22"></circle>
+                <circle class="ring-fg" cx="24" cy="24" r="22"></circle>
+            </svg>
+            <svg class="scroll-ctl-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </button>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
@@ -25,6 +40,7 @@
                 <li><a href="#services" class="nav-link">Cosa Faccio</a></li>
                 <li><a href="#projects" class="nav-link">Progetti</a></li>
                 <li><a href="#education" class="nav-link">Formazione</a></li>
+                <li><a href="#ai" class="nav-link">AI</a></li>
                 <li><a href="#contact" class="nav-link nav-link--cta">Contattami</a></li>
             </ul>
         </div>
@@ -60,12 +76,60 @@
                 </a>
                 <a href="#contact" class="btn btn--ghost">Parliamone</a>
             </div>
-            <div class="hero-scroll" data-animate="fade-up" data-delay="600">
-                <a href="#about" class="scroll-indicator" aria-label="Scorri verso il basso">
-                    <span class="scroll-text">Scorri</span>
-                    <div class="scroll-line"></div>
-                    <span class="scroll-arrow"></span>
-                </a>
+            <a href="#ai" class="hero-cert" data-animate="fade-up" data-delay="500">
+                <span class="hero-cert-mark">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <strong>22</strong> certificazioni Anthropic
+                <svg class="hero-cert-go" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+        <div class="hero-stack" aria-label="Tecnologie che utilizzo">
+            <div class="hero-stack-track">
+                <div class="hero-stack-run">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>NestJS</span>
+                        <span>Prisma</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Docker</span>
+                        <span>Podman</span>
+                        <span>Stripe</span>
+                        <span>Tailwind</span>
+                        <span>Python</span>
+                        <span>Laravel</span>
+                        <span>Claude AI</span>
+                        <span>MCP</span>
+                        <span>Git</span>
+                        <span>Linux</span>
+                        <span>Nginx</span>
+                        <span>REST API</span>
+                </div>
+                <div class="hero-stack-run" aria-hidden="true">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>NestJS</span>
+                        <span>Prisma</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Docker</span>
+                        <span>Podman</span>
+                        <span>Stripe</span>
+                        <span>Tailwind</span>
+                        <span>Python</span>
+                        <span>Laravel</span>
+                        <span>Claude AI</span>
+                        <span>MCP</span>
+                        <span>Git</span>
+                        <span>Linux</span>
+                        <span>Nginx</span>
+                        <span>REST API</span>
+                </div>
             </div>
         </div>
     </section>
@@ -271,6 +335,258 @@
         </div>
     </section>
 
+    <!-- AI Section -->
+    <section class="section ai" id="ai">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">05 / AI</span>
+                <h2 class="section-title">L&rsquo;AI non sostituisce.<br><span class="accent">Accelera.</span></h2>
+                <p class="section-desc">La uso ogni giorno come alleato di lavoro: consegno prima, con meno errori e senza mai perdere il controllo su quello che finisce in produzione.</p>
+            </div>
+
+            <div class="ai-uses">
+                <div class="ai-use" data-animate="fade-up" data-delay="50">
+                    <div class="ai-use-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    </div>
+                    <h3>Sviluppo pi&ugrave; veloce</h3>
+                    <p>Prototipi, refactoring e test in una frazione del tempo, con revisione umana su ogni riga che va online.</p>
+                </div>
+                <div class="ai-use" data-animate="fade-up" data-delay="120">
+                    <div class="ai-use-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path><polyline points="21 3 21 9 15 9"></polyline></svg>
+                    </div>
+                    <h3>Processi che girano da soli</h3>
+                    <p>Documenti, email, report e attivit&agrave; ripetitive trasformati in flussi automatici, dentro i sistemi che gi&agrave; usi.</p>
+                </div>
+                <div class="ai-use" data-animate="fade-up" data-delay="190">
+                    <div class="ai-use-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"></path></svg>
+                    </div>
+                    <h3>Soluzioni su misura</h3>
+                    <p>Assistenti collegati ai tuoi dati via API e Model Context Protocol, non chatbot generici scollegati dal business.</p>
+                </div>
+            </div>
+
+            <div class="certs-panel" data-animate="fade-up" data-delay="100">
+                <div class="certs-head">
+                    <div class="certs-head-text">
+                        <h3>Certificazioni Anthropic</h3>
+                        <p>Percorso ufficiale completato tra aprile e settembre 2026. Clicca un attestato per aprirlo.</p>
+                    </div>
+                    <div class="certs-count"><strong>22</strong><span>attestati</span></div>
+                </div>
+                <div class="cert-filters" id="certFilters">
+                    <button type="button" class="cert-filter is-active" data-filter="all">Tutti <span>22</span></button>
+                    <button type="button" class="cert-filter" data-filter="sviluppo">Sviluppo <span>4</span></button>
+                    <button type="button" class="cert-filter" data-filter="integrazioni">Integrazioni <span>5</span></button>
+                    <button type="button" class="cert-filter" data-filter="strumenti">Piattaforma <span>3</span></button>
+                    <button type="button" class="cert-filter" data-filter="fluency">AI Fluency <span>10</span></button>
+                </div>
+                <div class="certs-grid" id="certsGrid">
+                    <a href="assets/certificati/claude-with-google-vertex-ai.pdf" target="_blank" rel="noopener" class="cert" data-cat="integrazioni">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-with-google-vertex-ai.jpg" alt="Certificato: Claude with Google Vertex AI" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude with Google Vertex AI</span>
+                            <span class="cert-meta"><span class="cert-cat">Integrazioni</span><time datetime="2026-09-08">settembre 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-creative-work.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-creative-work.jpg" alt="Certificato: AI Fluency for Creative Work" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Creative Work</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-09-07">settembre 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-with-amazon-bedrock.pdf" target="_blank" rel="noopener" class="cert" data-cat="integrazioni">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-with-amazon-bedrock.jpg" alt="Certificato: Claude with Amazon Bedrock" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude with Amazon Bedrock</span>
+                            <span class="cert-meta"><span class="cert-cat">Integrazioni</span><time datetime="2026-09-07">settembre 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-k-12-educators.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-k-12-educators.jpg" alt="Certificato: AI Fluency for K-12 Educators" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for K-12 Educators</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-09-07">settembre 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-platform-101.pdf" target="_blank" rel="noopener" class="cert" data-cat="strumenti">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-platform-101.jpg" alt="Certificato: Claude Platform 101" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude Platform 101</span>
+                            <span class="cert-meta"><span class="cert-cat">Piattaforma</span><time datetime="2026-06-29">giugno 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-builders.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-builders.jpg" alt="Certificato: AI Fluency for Builders" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Builders</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-06-29">giugno 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/model-context-protocol-advanced-topics.pdf" target="_blank" rel="noopener" class="cert" data-cat="integrazioni">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/model-context-protocol-advanced-topics.jpg" alt="Certificato: Model Context Protocol: Advanced Topics" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Model Context Protocol: Advanced Topics</span>
+                            <span class="cert-meta"><span class="cert-cat">Integrazioni</span><time datetime="2026-06-29">giugno 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-students.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-students.jpg" alt="Certificato: AI Fluency for Students" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Students</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-21">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/introduction-to-subagents.pdf" target="_blank" rel="noopener" class="cert" data-cat="sviluppo">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/introduction-to-subagents.jpg" alt="Certificato: Introduction to Subagents" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Introduction to Subagents</span>
+                            <span class="cert-meta"><span class="cert-cat">Sviluppo</span><time datetime="2026-05-21">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/introduction-to-agent-skills.pdf" target="_blank" rel="noopener" class="cert" data-cat="sviluppo">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/introduction-to-agent-skills.jpg" alt="Certificato: Introduction to Agent Skills" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Introduction to Agent Skills</span>
+                            <span class="cert-meta"><span class="cert-cat">Sviluppo</span><time datetime="2026-05-21">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/teaching-the-ai-fluency-framework.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/teaching-the-ai-fluency-framework.jpg" alt="Certificato: Teaching the AI Fluency Framework" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Teaching the AI Fluency Framework</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-21">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-educators.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-educators.jpg" alt="Certificato: AI Fluency for Educators" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Educators</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-14">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-nonprofits.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-nonprofits.jpg" alt="Certificato: AI Fluency for Nonprofits" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Nonprofits</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-14">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-for-small-businesses.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-for-small-businesses.jpg" alt="Certificato: AI Fluency for Small Businesses" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency for Small Businesses</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-14">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/introduction-to-model-context-protocol.pdf" target="_blank" rel="noopener" class="cert" data-cat="integrazioni">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/introduction-to-model-context-protocol.jpg" alt="Certificato: Introduction to Model Context Protocol" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Introduction to Model Context Protocol</span>
+                            <span class="cert-meta"><span class="cert-cat">Integrazioni</span><time datetime="2026-05-14">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-with-the-anthropic-api.pdf" target="_blank" rel="noopener" class="cert" data-cat="integrazioni">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-with-the-anthropic-api.jpg" alt="Certificato: Claude with the Anthropic API" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude with the Anthropic API</span>
+                            <span class="cert-meta"><span class="cert-cat">Integrazioni</span><time datetime="2026-05-12">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-framework-e-foundations.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-framework-e-foundations.jpg" alt="Certificato: AI Fluency: Framework & Foundations" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency: Framework & Foundations</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-05-05">maggio 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/introduction-to-claude-cowork.pdf" target="_blank" rel="noopener" class="cert" data-cat="strumenti">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/introduction-to-claude-cowork.jpg" alt="Certificato: Introduction to Claude Cowork" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Introduction to Claude Cowork</span>
+                            <span class="cert-meta"><span class="cert-cat">Piattaforma</span><time datetime="2026-04-30">aprile 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-code-in-action.pdf" target="_blank" rel="noopener" class="cert" data-cat="sviluppo">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-code-in-action.jpg" alt="Certificato: Claude Code in Action" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude Code in Action</span>
+                            <span class="cert-meta"><span class="cert-cat">Sviluppo</span><time datetime="2026-04-30">aprile 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/ai-fluency-ai-capabilities-e-limitations.pdf" target="_blank" rel="noopener" class="cert" data-cat="fluency">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/ai-fluency-ai-capabilities-e-limitations.jpg" alt="Certificato: AI Fluency: AI Capabilities & Limitations" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">AI Fluency: AI Capabilities & Limitations</span>
+                            <span class="cert-meta"><span class="cert-cat">AI Fluency</span><time datetime="2026-04-30">aprile 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-code-101.pdf" target="_blank" rel="noopener" class="cert" data-cat="sviluppo">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-code-101.jpg" alt="Certificato: Claude Code 101" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude Code 101</span>
+                            <span class="cert-meta"><span class="cert-cat">Sviluppo</span><time datetime="2026-04-30">aprile 2026</time></span>
+                        </span>
+                    </a>
+                    <a href="assets/certificati/claude-101.pdf" target="_blank" rel="noopener" class="cert" data-cat="strumenti">
+                        <span class="cert-shot">
+                            <img src="assets/certificati/claude-101.jpg" alt="Certificato: Claude 101" loading="lazy" decoding="async" width="520" height="402">
+                        </span>
+                        <span class="cert-body">
+                            <span class="cert-title">Claude 101</span>
+                            <span class="cert-meta"><span class="cert-cat">Piattaforma</span><time datetime="2026-04-30">aprile 2026</time></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Philosophy Quote -->
     <section class="section quote-section">
         <div class="container">
@@ -284,7 +600,7 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">05 / Contatti</span>
+                <span class="section-tag">06 / Contatti</span>
                 <h2 class="section-title">Parliamone<span class="accent">.</span></h2>
                 <p class="section-desc">Hai un progetto in mente? Vuoi capire come il software può semplificare il tuo lavoro? Scrivimi.</p>
             </div>
@@ -297,6 +613,16 @@
                         <div>
                             <h3>LinkedIn</h3>
                             <p>Connettiti con me</p>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                    <a href="https://www.instagram.com/luca_carlo__/" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>@luca_carlo__</p>
                         </div>
                         <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     </a>
