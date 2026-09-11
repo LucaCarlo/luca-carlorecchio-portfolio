@@ -3,6 +3,8 @@
    Per sostituire un render CSS con una foto:
    metti il file in img/<codice>.jpg (es. img/S1.jpg).
    Per le foto ambientate: img/ambientata-<n>.jpg
+   Pannelli livello: img/tier-basic.jpg, tier-standard.jpg, tier-premium.jpg
+   Hero: img/hero.jpg  |  Personalizzazione: img/X1.jpg, X2.jpg, X3.jpg
    ============================================ */
 
 const CONTACT_EMAIL = 'lucacarlorecchio25@gmail.com';
@@ -154,6 +156,7 @@ supportSel.addEventListener('change', () => { state.support = supportSel.value; 
 const extrasEl = $('#extras');
 extrasEl.innerHTML = EXTRAS.map((x, i) => `
     <button class="extra ${i === 0 ? 'selected' : ''}" type="button" data-code="${x.code}">
+        <img class="extra-photo" src="img/${x.code}.jpg" alt="" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
         <div class="extra-head"><span class="extra-code">${x.code}</span><span class="extra-check"></span></div>
         <span class="extra-name">Personalizzazione ${x.name}</span>
         <span class="extra-price ${x.price === 0 ? 'free' : ''}">${x.price === 0 ? 'Inclusa' : '+' + euro(x.price)}</span>
