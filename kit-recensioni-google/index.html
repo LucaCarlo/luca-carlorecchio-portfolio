@@ -6,303 +6,189 @@
     <title>Recensioni Google per la tua attività | Luca Carlorecchio</title>
     <meta name="description" content="Card e espositori da banco con QR code che portano il cliente direttamente alla pagina recensioni Google della tua attività. Un'idea di Luca Carlorecchio, Local Guide.">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#0a0a0b">
+    <meta name="theme-color" content="#fbfaf7">
     <link rel="icon" href="../favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="kit.css">
 </head>
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="../" class="nav-logo">LC<span class="accent">.</span></a>
-            <ul class="nav-menu">
-                <li><a href="#chi-sono" class="nav-link">Chi sono</a></li>
-                <li><a href="#perche" class="nav-link">Perché le recensioni</a></li>
-                <li><a href="#come-funziona" class="nav-link">Come funziona</a></li>
-                <li><a href="#esempi" class="nav-link">Esempi</a></li>
-                <li><a href="#contatti" class="nav-link nav-link--cta">Scrivimi</a></li>
+        <div class="wrap nav-inner">
+            <a href="../" class="logo">LC<span>.</span></a>
+            <ul class="menu">
+                <li><a href="#esempi">Esempi</a></li>
+                <li><a href="#chi-sono">Chi sono</a></li>
+                <li><a href="#perche">Perché</a></li>
             </ul>
+            <a href="#contatti" class="btn btn--dark btn--sm">Scrivimi</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-grid"></div>
-            <div class="hero-glow hero-glow--1"></div>
-            <div class="hero-glow hero-glow--2"></div>
-        </div>
-        <div class="container hero-inner">
-            <div class="hero-copy">
-                <div class="hero-badge" data-animate="fade-up">
-                    <span class="pulse-dot"></span>
-                    Un'idea di un Local Guide, per le attività locali
-                </div>
-                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
-                    Le recensioni Google<br>
-                    <span class="hero-title--grad">a portata di banco.</span>
-                </h1>
-                <p class="hero-description" data-animate="fade-up" data-delay="200">
-                    Un piccolo espositore con il nome della tua attività e un QR code che porta il cliente <em>direttamente</em> alla pagina per lasciare la recensione. Nessuna ricerca, nessun passaggio in più: inquadra e scrive.
-                </p>
-                <div class="hero-actions" data-animate="fade-up" data-delay="300">
-                    <a href="#esempi" class="btn btn--primary">
-                        Guarda gli esempi
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                    <a href="#chi-sono" class="btn btn--ghost">Chi c'è dietro</a>
-                </div>
+    <!-- 1. Hero -->
+    <header class="hero">
+        <div class="wrap hero-text">
+            <p class="eyebrow" data-animate>Per bar, officine, ristoranti, studi, negozi</p>
+            <h1 data-animate data-delay="80">Le recensioni Google,<br><em>a portata di banco.</em></h1>
+            <p class="lead" data-animate data-delay="160">Un piccolo espositore con il nome della tua attività e un QR che porta il cliente dritto alla pagina per lasciare la recensione. Inquadra, scrive, pubblica. Venti secondi.</p>
+            <div class="hero-actions" data-animate data-delay="240">
+                <a href="#esempi" class="btn btn--dark">Guarda gli esempi</a>
+                <a href="#contatti" class="btn btn--light">Scrivimi</a>
             </div>
-            <figure class="hero-visual" data-animate="fade-up" data-delay="200">
-                <img src="img/bancone-telefono.jpg" alt="Card recensioni Google sul bancone di un bar, un cliente inquadra il QR con il telefono" width="1312" height="1199" data-lightbox>
-                <figcaption class="hero-float">
-                    <span class="stars">★★★★★</span>
-                    <span>Recensione lasciata in venti secondi</span>
-                </figcaption>
-            </figure>
+        </div>
+        <figure class="wrap hero-photo" data-animate data-delay="200">
+            <img src="img/bancone-telefono.jpg" alt="Card recensioni Google sul bancone di un bar, un cliente inquadra il QR con il telefono" width="1312" height="1199" data-lightbox fetchpriority="high">
+            <figcaption><span class="stars">★★★★★</span> La recensione parte dal banco, nel momento giusto.</figcaption>
+        </figure>
+    </header>
+
+    <!-- 2. Esempi -->
+    <section class="section" id="esempi">
+        <div class="wrap">
+            <div class="head" data-animate>
+                <h2>Quattro modi di metterlo sul banco.</h2>
+                <p>Stessa idea, formati diversi a seconda dello spazio e dello stile del locale. Tocca le foto per ingrandirle.</p>
+            </div>
+
+            <article class="format" data-animate>
+                <figure class="format-photo">
+                    <img src="img/bancone-bar-front.jpg" alt="Card recensioni Google appoggiata sul bancone di un bar accanto al POS" width="1536" height="1024" data-lightbox loading="lazy">
+                </figure>
+                <div class="format-text">
+                    <span class="num">01</span>
+                    <h3>La card</h3>
+                    <p>Una card rigida 10×15 con il tuo nome, le stelle e il QR. Si appoggia dove capita, si infila nel portatovaglioli, sta accanto alla cassa. Zero ingombro, bianca o nera.</p>
+                    <div class="thumbs">
+                        <img src="img/bancone-bar-front-verticale.jpg" alt="Card recensioni Google appoggiata al portatovaglioli di un cocktail bar" width="1536" height="1024" data-lightbox loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article class="format format--flip" data-animate>
+                <figure class="format-photo">
+                    <img src="img/bancone-front-sostegno.jpg" alt="Card recensioni Google in supporto di plexiglass sul bancone di un ristorante" width="1536" height="1024" data-lightbox loading="lazy">
+                </figure>
+                <div class="format-text">
+                    <span class="num">02</span>
+                    <h3>La card con supporto</h3>
+                    <p>La stessa card in piedi in un supporto trasparente. Si vede da lontano, non si sposta, non si sporca. La scelta più comune per bancone, reception e tavoli.</p>
+                    <div class="thumbs">
+                        <img src="img/tavolo-front-sostegno.jpg" alt="Card recensioni Google con supporto sul tavolo di un ristorante" width="1536" height="1024" data-lightbox loading="lazy">
+                        <img src="img/bancone-back-sostegno.jpg" alt="Card recensioni Google con QR in supporto trasparente" width="1536" height="1024" data-lightbox loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article class="format" data-animate>
+                <figure class="format-photo format-photo--square">
+                    <img src="img/bancone-pasticceria-premium.jpg" alt="Espositore professionale bianco con sostegno integrato sul banco di una pasticceria" width="1254" height="1254" data-lightbox loading="lazy">
+                </figure>
+                <div class="format-text">
+                    <span class="num">03</span>
+                    <h3>L'espositore professionale</h3>
+                    <p>Un pezzo unico, rigido, con il sostegno integrato: la grafica è stampata direttamente sul materiale. Spessore, finitura lucida, presenza. Per chi vuole che si noti.</p>
+                    <div class="thumbs">
+                        <img src="img/cocktail-bar-premium-nero.jpg" alt="Espositore professionale nero con sostegno integrato sul bancone di un cocktail bar" width="1254" height="1254" data-lightbox loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article class="format format--flip" data-animate>
+                <figure class="format-photo">
+                    <img src="img/officina.jpg" alt="Espositore personalizzato Officina Micar con logo, colori aziendali e QR code, sul banco di un'officina" width="1448" height="1086" data-lightbox loading="lazy">
+                </figure>
+                <div class="format-text">
+                    <span class="num">04</span>
+                    <h3>Su misura per te</h3>
+                    <p>Il tuo logo, i tuoi colori, una frase tua, in qualsiasi formato. Il cliente non vede un cartello di Google: vede la tua attività. Anteprima prima della stampa, si produce solo con il tuo ok.</p>
+                </div>
+            </article>
         </div>
     </section>
 
-    <!-- Chi sono -->
-    <section class="section about" id="chi-sono">
-        <div class="container about-inner">
-            <figure class="about-photo" data-animate="fade-up">
+    <!-- 3. Chi sono -->
+    <section class="section section--tint" id="chi-sono">
+        <div class="wrap about">
+            <figure class="about-photo" data-animate>
                 <img src="img/luca.jpg" alt="Luca Carlorecchio" width="900" height="1350">
-                <figcaption>
-                    <strong>Luca Carlorecchio</strong>
-                    <span>Local Guide · Sviluppatore web</span>
-                </figcaption>
             </figure>
-            <div class="about-copy">
-                <span class="section-tag" data-animate="fade-up">Chi sono</span>
-                <h2 class="section-title" data-animate="fade-up" data-delay="100">Recensisco attività da anni. Ho visto cosa cambia quando le recensioni arrivano.</h2>
-                <div class="about-text" data-animate="fade-up" data-delay="200">
-                    <p>Sono Luca, Local Guide su Google Maps e sviluppatore web. Da anni scrivo recensioni di attività locali: bar, officine, ristoranti, studi, negozi. Non per abitudine, ma perché so quanto contano per chi le riceve.</p>
-                    <p>Nel tempo ho notato una cosa che si ripete sempre. Le attività con recensioni recenti e numerose compaiono prima nelle ricerche, vengono scelte più spesso e trasmettono fiducia ancora prima che il cliente entri. Quelle che lavorano benissimo ma hanno poche recensioni restano invisibili, anche se meritano di più.</p>
-                    <p>Il problema non è che i clienti non vogliono recensire. È che nel momento in cui sono contenti nessuno glielo rende facile. Da qui l'idea: un espositore da banco che elimina ogni passaggio tra il cliente soddisfatto e la sua recensione.</p>
-                </div>
-                <ul class="about-facts" data-animate="fade-up" data-delay="300">
-                    <li>
-                        <span class="fact-ico">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </span>
-                        <span><strong>Local Guide</strong> attivo su Google Maps</span>
-                    </li>
-                    <li>
-                        <span class="fact-ico">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        </span>
-                        <span><strong>Recensore esperto</strong>, so cosa leggono i clienti prima di scegliere</span>
-                    </li>
-                    <li>
-                        <span class="fact-ico">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        </span>
-                        <span><strong>Sviluppatore web</strong>, ogni QR è generato e testato da me</span>
-                    </li>
+            <div class="about-text" data-animate data-delay="100">
+                <span class="num">Chi sono</span>
+                <h2>Luca Carlorecchio, Local Guide.</h2>
+                <p>Recensisco attività locali da anni su Google Maps, e ho visto la stessa cosa ripetersi ovunque: chi ha recensioni recenti compare prima, viene scelto più spesso e ispira fiducia ancora prima che il cliente entri. Chi lavora benissimo ma ne ha poche resta invisibile.</p>
+                <p>Il problema non è che i clienti non vogliono recensire. È che nessuno glielo rende facile nel momento in cui sono contenti. Da qui l'idea. Sono anche sviluppatore web: ogni QR lo genero e lo testo io, sulla tua scheda vera.</p>
+                <ul class="tags">
+                    <li>Local Guide su Google Maps</li>
+                    <li>Recensore esperto</li>
+                    <li>Sviluppatore web</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Perché le recensioni contano -->
-    <section class="section why" id="perche">
-        <div class="container">
-            <div class="section-header center" data-animate="fade-up">
-                <span class="section-tag">Perché le recensioni contano</span>
-                <h2 class="section-title">Non sono un dettaglio. Sono la vetrina.</h2>
-                <p class="section-desc">Oggi la prima cosa che una persona vede della tua attività non è l'insegna: è la scheda Google, con le stelle e i commenti degli altri clienti.</p>
+    <!-- 4. Perché -->
+    <section class="section" id="perche">
+        <div class="wrap">
+            <div class="head" data-animate>
+                <h2>Perché le recensioni contano.</h2>
+                <p>La prima cosa che una persona vede della tua attività non è l'insegna. È la scheda Google, con le stelle e le parole degli altri clienti.</p>
             </div>
-            <div class="why-grid">
-                <article class="why-card" data-animate="fade-up">
-                    <span class="why-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </span>
-                    <h3>Visibilità e posizionamento</h3>
-                    <p>Google usa numero, frequenza e qualità delle recensioni per decidere chi mostrare per primo nelle ricerche locali e su Maps. Più recensioni recenti, più occasioni di essere trovati.</p>
-                </article>
-                <article class="why-card" data-animate="fade-up" data-delay="100">
-                    <span class="why-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </span>
-                    <h3>Credibilità e fiducia</h3>
-                    <p>Una scheda con tante recensioni vere è la prova che l'attività esiste, lavora e soddisfa. Il cliente si fida di chi è già passato prima di lui più di qualsiasi pubblicità.</p>
-                </article>
-                <article class="why-card" data-animate="fade-up" data-delay="200">
-                    <span class="why-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                    </span>
-                    <h3>Informazioni per chi deve scegliere</h3>
-                    <p>Nelle recensioni i clienti raccontano quello che nessuna scheda dice: come si viene accolti, i tempi, la cura. Sono le risposte alle domande che la gente si fa prima di entrare.</p>
-                </article>
-                <article class="why-card" data-animate="fade-up" data-delay="300">
-                    <span class="why-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                    </span>
-                    <h3>Indicizzazione continua</h3>
-                    <p>Ogni recensione è contenuto nuovo sulla tua scheda, con parole che i clienti usano davvero. È il modo più naturale per tenerla viva agli occhi di Google, senza fare nulla.</p>
-                </article>
+            <div class="why" data-animate data-delay="100">
+                <div class="why-item">
+                    <span class="why-num">1</span>
+                    <h3>Ti trovano</h3>
+                    <p>Google usa numero e freschezza delle recensioni per decidere chi mostrare prima nelle ricerche locali e su Maps.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-num">2</span>
+                    <h3>Si fidano</h3>
+                    <p>Tante recensioni vere sono la prova che lavori bene. Il cliente crede a chi è già passato più di qualsiasi pubblicità.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-num">3</span>
+                    <h3>Entrano</h3>
+                    <p>Nelle recensioni trovano le risposte che cercano prima di scegliere: accoglienza, tempi, cura. E la scheda resta viva agli occhi di Google.</p>
+                </div>
             </div>
+            <p class="fine" data-animate data-delay="150">L'espositore rende più semplice lasciare una recensione. La recensione resta libera e volontaria, come previsto da Google.</p>
         </div>
     </section>
 
-    <!-- Come funziona -->
-    <section class="section how" id="come-funziona">
-        <div class="container">
-            <div class="section-header center" data-animate="fade-up">
-                <span class="section-tag">Come funziona</span>
-                <h2 class="section-title">Tre secondi, zero spiegazioni</h2>
-                <p class="section-desc">Il cliente contento vorrebbe anche lasciare una recensione. Non lo fa perché deve cercarti, aprire Maps, trovare il punto giusto. L'espositore elimina tutti i passaggi.</p>
-            </div>
-            <div class="steps">
-                <div class="step" data-animate="fade-up">
-                    <span class="step-num">01</span>
-                    <h3>È sul banco</h3>
-                    <p>Alla cassa, in reception, sul tavolo. Il cliente lo vede nel momento in cui è più contento: quando ha appena ricevuto il servizio.</p>
-                </div>
-                <div class="step" data-animate="fade-up" data-delay="100">
-                    <span class="step-num">02</span>
-                    <h3>Inquadra il QR</h3>
-                    <p>Qualsiasi telefono, senza app. Il QR punta alla pagina di recensione della tua scheda Google, non alla home di Maps.</p>
-                </div>
-                <div class="step" data-animate="fade-up" data-delay="200">
-                    <span class="step-num">03</span>
-                    <h3>Scrive e pubblica</h3>
-                    <p>Si apre subito il modulo con le stelle. Nessuna ricerca, nessun dubbio su quale sia la tua attività.</p>
-                </div>
-            </div>
-            <p class="how-note" data-animate="fade-up">L'espositore rende più semplice lasciare una recensione. La recensione resta libera e volontaria, come previsto da Google.</p>
-        </div>
-    </section>
-
-    <!-- Esempi -->
-    <section class="section examples" id="esempi">
-        <div class="container">
-            <div class="section-header center" data-animate="fade-up">
-                <span class="section-tag">Esempi</span>
-                <h2 class="section-title">Quattro modi di metterlo sul banco</h2>
-                <p class="section-desc">Stessa idea, formati diversi a seconda dello spazio e dello stile della tua attività. Clicca le foto per ingrandirle.</p>
-            </div>
-        </div>
-
-        <div class="container versions">
-            <article class="version" data-animate="fade-up">
-                <div class="version-media">
-                    <figure class="shot shot--main"><img src="img/bancone-bar-front.jpg" alt="Card recensioni Google appoggiata sul bancone di un bar accanto al POS" width="1536" height="1024" data-lightbox loading="lazy"></figure>
-                    <figure class="shot"><img src="img/bancone-bar-front-verticale.jpg" alt="Card recensioni Google appoggiata al portatovaglioli di un cocktail bar" width="1536" height="1024" data-lightbox loading="lazy"></figure>
-                </div>
-                <div class="version-copy">
-                    <span class="version-num">01</span>
-                    <h3>La card</h3>
-                    <p>Il formato base: una card rigida 10×15 cm con il nome dell'attività, il logo Google, le stelle e il QR. Si appoggia dove capita, si infila in un portatovaglioli, si attacca vicino alla cassa. Zero ingombro.</p>
-                    <ul class="version-list">
-                        <li>Cartoncino rigido plastificato, resiste a mani e caffè</li>
-                        <li>Bianca o nera, testi in italiano o inglese</li>
-                        <li>Perfetta per iniziare o per averne più di una in giro</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="version version--reverse" data-animate="fade-up">
-                <div class="version-media">
-                    <figure class="shot shot--main"><img src="img/bancone-front-sostegno.jpg" alt="Card recensioni Google in supporto di plexiglass sul bancone di un ristorante" width="1536" height="1024" data-lightbox loading="lazy"></figure>
-                    <figure class="shot"><img src="img/tavolo-front-sostegno.jpg" alt="Card recensioni Google con supporto sul tavolo di un ristorante" width="1536" height="1024" data-lightbox loading="lazy"></figure>
-                    <figure class="shot"><img src="img/bancone-back-sostegno.jpg" alt="Card recensioni Google con QR in supporto trasparente" width="1536" height="1024" data-lightbox loading="lazy"></figure>
-                </div>
-                <div class="version-copy">
-                    <span class="version-num">02</span>
-                    <h3>La card con supporto</h3>
-                    <p>La stessa card, in piedi in un supporto trasparente. Si vede da lontano, non si sposta, non si sporca. È la scelta più comune per bancone, reception e tavoli.</p>
-                    <ul class="version-list">
-                        <li>Supporto in plexiglass trasparente, quasi invisibile</li>
-                        <li>Card intercambiabile: se cambi grafica cambi solo la card</li>
-                        <li>Arriva già montato, lo appoggi e basta</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="version" data-animate="fade-up">
-                <div class="version-media">
-                    <figure class="shot shot--main"><img src="img/bancone-pasticceria-premium.jpg" alt="Espositore professionale bianco con sostegno integrato sul banco di una pasticceria" width="1254" height="1254" data-lightbox loading="lazy"></figure>
-                    <figure class="shot"><img src="img/cocktail-bar-premium-nero.jpg" alt="Espositore professionale nero con sostegno integrato sul bancone di un cocktail bar" width="1254" height="1254" data-lightbox loading="lazy"></figure>
-                </div>
-                <div class="version-copy">
-                    <span class="version-num">03</span>
-                    <h3>L'espositore professionale</h3>
-                    <p>Un pezzo unico, rigido, con il sostegno integrato: la grafica è stampata direttamente sul materiale, niente cartoncino. Spessore, finitura lucida, presenza sul banco. Per chi vuole che si noti.</p>
-                    <ul class="version-list">
-                        <li>Bianco o nero, a seconda dello stile del locale</li>
-                        <li>Stampa diretta su materiale rigido, si pulisce con un panno</li>
-                        <li>Il più adatto a locali curati: cocktail bar, pasticcerie, studi</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="version version--reverse version--wide" data-animate="fade-up">
-                <div class="version-media">
-                    <figure class="shot shot--main"><img src="img/officina.jpg" alt="Espositore personalizzato Officina Micar con logo, colori aziendali e QR code, sul banco di un'officina" width="1448" height="1086" data-lightbox loading="lazy"></figure>
-                </div>
-                <div class="version-copy">
-                    <span class="version-num">04</span>
-                    <h3>Su misura per la tua attività</h3>
-                    <p>Il tuo logo, i tuoi colori, una frase tua. Qualsiasi formato tra quelli sopra, disegnato come se l'avesse fatto il tuo grafico. Il cliente non vede "un cartello di Google": vede te.</p>
-                    <ul class="version-list">
-                        <li>Logo e colori aziendali, testo scritto insieme a te</li>
-                        <li>Anteprima prima della stampa, si produce solo con il tuo ok</li>
-                        <li>QR reale della tua scheda, testato da me prima di stampare</li>
-                    </ul>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contatti -->
+    <!-- 5. Contatti -->
     <section class="section contact" id="contatti">
-        <div class="container">
-            <div class="contact-box" data-animate="fade-up">
-                <span class="section-tag">Contatti</span>
-                <h2 class="section-title">Ti interessa? Scrivimi.</h2>
-                <p class="section-desc">Mandami il nome della tua attività e due righe su dove lo metteresti. Ti rispondo con un'anteprima con il tuo nome, senza impegno, e vediamo insieme il formato giusto.</p>
-                <a class="contact-mail" href="mailto:lucacarlorecchio25@gmail.com?subject=Recensioni%20Google%20per%20la%20mia%20attivit%C3%A0&body=Ciao%20Luca%2C%0A%0ANome%20attivit%C3%A0%3A%20%0ACitt%C3%A0%3A%20%0ADove%20lo%20metterei%3A%20%0A%0A">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    lucacarlorecchio25@gmail.com
-                </a>
-                <div class="contact-actions">
-                    <a href="mailto:lucacarlorecchio25@gmail.com?subject=Recensioni%20Google%20per%20la%20mia%20attivit%C3%A0&body=Ciao%20Luca%2C%0A%0ANome%20attivit%C3%A0%3A%20%0ACitt%C3%A0%3A%20%0ADove%20lo%20metterei%3A%20%0A%0A" class="btn btn--primary btn--lg">
-                        Scrivimi una email
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                    <a href="https://www.instagram.com/luca_carlo__/" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Oppure su Instagram</a>
-                </div>
-            </div>
+        <div class="wrap contact-box" data-animate>
+            <h2>Ti interessa? <em>Scrivimi.</em></h2>
+            <p>Mandami il nome della tua attività e dove lo metteresti. Ti rispondo con un'anteprima con il tuo nome, senza impegno, e vediamo insieme il formato giusto.</p>
+            <a class="btn btn--dark btn--lg" href="mailto:lucacarlorecchio25@gmail.com?subject=Recensioni%20Google%20per%20la%20mia%20attivit%C3%A0&body=Ciao%20Luca%2C%0A%0ANome%20attivit%C3%A0%3A%20%0ACitt%C3%A0%3A%20%0ADove%20lo%20metterei%3A%20%0A%0A">Scrivimi una email</a>
+            <a class="mail" href="mailto:lucacarlorecchio25@gmail.com">lucacarlorecchio25@gmail.com</a>
+            <a class="ig" href="https://www.instagram.com/luca_carlo__/" target="_blank" rel="noopener">oppure su Instagram</a>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container footer-inner">
-            <span>© <span id="year"></span> Luca Carlorecchio · <a href="../">lucacarlorecchio</a></span>
-            <span class="footer-note">Google e il logo Google sono marchi di Google LLC. Prodotto indipendente, non affiliato a Google.</span>
+        <div class="wrap footer-inner">
+            <span>© <span id="year"></span> Luca Carlorecchio · <a href="../">portfolio</a></span>
+            <span>Google e il logo Google sono marchi di Google LLC. Prodotto indipendente, non affiliato a Google.</span>
         </div>
     </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" hidden>
         <div class="lightbox-backdrop" data-lb-close></div>
-        <button class="lightbox-btn lightbox-close" type="button" aria-label="Chiudi" data-lb-close>
+        <button class="lb-btn lb-close" type="button" aria-label="Chiudi" data-lb-close>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
-        <button class="lightbox-btn lightbox-prev" type="button" aria-label="Precedente" data-lb-prev>
+        <button class="lb-btn lb-prev" type="button" aria-label="Precedente" data-lb-prev>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-        <button class="lightbox-btn lightbox-next" type="button" aria-label="Successiva" data-lb-next>
+        <button class="lb-btn lb-next" type="button" aria-label="Successiva" data-lb-next>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
-        <figure class="lightbox-figure">
+        <figure class="lb-figure">
             <img id="lightboxImg" src="" alt="">
             <figcaption id="lightboxCaption"></figcaption>
         </figure>
